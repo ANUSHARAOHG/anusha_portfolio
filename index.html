@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Anusha Rao HG — UI/UX Designer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root { --accent: #7c3aed; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    .project-card {
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+    }
+
+    .carousel-inner {
+      min-height: 420px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Anusha Rao HG</a>
+
+    <div class="form-check form-switch ms-auto">
+      <input class="form-check-input" type="checkbox" id="themeToggle">
+      <label class="form-check-label" id="themeLabel">Dark</label>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-5">
+
+<section id="projects">
+  <h2 class="h3 mb-3">View My Work</h2>
+  <h3 class="h5 text-muted mb-4">My Projects</h3>
+
+  <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1"></button>
+    </div>
+
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1 -->
+      <div class="carousel-item active">
+        <div class="row g-3">
+
+          <!-- CARD -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card project-card h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-title="MotolensAi"
+              data-image="/assets/motolensai.png"
+              data-points="Company & admin flow|Settings screen design|Multiple theme support|UI + development">
+              <img src="/assets/motolensai.png" class="card-img-top">
+              <div class="card-body">
+                <h5>MotolensAi</h5>
+                <p class="text-muted small">Company flow & settings screens.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card project-card h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-title="Truth Hero"
+              data-image="/assets/truth-hero.png"
+              data-points="Brand-driven UI|Reusable components|Clear UX hierarchy">
+              <img src="/assets/truth-hero.png" class="card-img-top">
+              <div class="card-body">
+                <h5>Truth Hero</h5>
+                <p class="text-muted small">Brand-driven UI components.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card project-card h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-title="Property App"
+              data-image="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+              data-points="Theme exploration|Component consistency|Responsive layouts">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="card-img-top">
+              <div class="card-body">
+                <h5>Property App</h5>
+                <p class="text-muted small">UI & theme consistency.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card project-card h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-title="RecN"
+              data-image="https://images.unsplash.com/photo-1502877338535-766e1452684a"
+              data-points="Vehicle offense capture|Fast form UX|Field usability focused">
+              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="card-img-top">
+              <div class="card-body">
+                <h5>RecN</h5>
+                <p class="text-muted small">Vehicle offense capture UX.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SLIDE 2 -->
+      <div class="carousel-item">
+        <div class="row g-3">
+          <div class="col-lg-3 col-md-6">
+            <div class="card project-card h-100"
+              data-bs-toggle="modal"
+              data-bs-target="#projectModal"
+              data-title="Staymaker"
+              data-image="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
+              data-points="Booking flow UX|Admin dashboard|Hospitality platform UI">
+              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" class="card-img-top">
+              <div class="card-body">
+                <h5>Staymaker</h5>
+                <p class="text-muted small">Booking flow design.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal fade" id="projectModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalTitle"></h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <img id="projectModalImage" class="img-fluid rounded mb-3">
+        <ul id="projectModalPoints" class="text-muted"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Theme toggle
+  const toggle = document.getElementById('themeToggle');
+  const label = document.getElementById('themeLabel');
+  const stored = localStorage.getItem('site-theme') || 'dark';
+
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-bs-theme', t);
+    toggle.checked = t === 'dark';
+    label.textContent = t === 'dark' ? 'Dark' : 'Light';
+    localStorage.setItem('site-theme', t);
+  }
+  applyTheme(stored);
+  toggle.addEventListener('change', () => applyTheme(toggle.checked ? 'dark' : 'light'));
+
+  // Modal dynamic content
+  const modal = document.getElementById('projectModal');
+  modal.addEventListener('show.bs.modal', e => {
+    const card = e.relatedTarget;
+    document.getElementById('projectModalTitle').textContent = card.dataset.title;
+    document.getElementById('projectModalImage').src = card.dataset.image;
+
+    const ul = document.getElementById('projectModalPoints');
+    ul.innerHTML = '';
+    card.dataset.points.split('|').forEach(p => {
+      const li = document.createElement('li');
+      li.textContent = p;
+      ul.appendChild(li);
+    });
+  });
+</script>
+
+</body>
+</html>
