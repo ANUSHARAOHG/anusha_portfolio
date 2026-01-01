@@ -5,205 +5,461 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Anusha Rao HG — UI/UX Designer</title>
-
+  <meta name="description" content="Portfolio of Anusha Rao HG — UI/UX Designer. Projects, experience, and contact." />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    :root { --accent: #7c3aed; }
+    :root {
+      --accent: #7c3aed
+    }
 
+    html,
     body {
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), #06b6d4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
     }
 
     .project-card {
-      cursor: pointer;
-      transition: transform .2s ease, box-shadow .2s ease;
+      transition: transform .18s ease, box-shadow .18s ease
     }
 
     .project-card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
+      box-shadow: 0 12px 30px rgba(2, 6, 23, 0.5)
     }
 
-    .carousel-inner {
-      min-height: 420px;
+    .skill-badge {
+      border-radius: 999px;
+      padding: .45rem .6rem;
+      font-weight: 600
+    }
+
+    .theme-transition {
+      transition: background-color .25s ease, color .25s ease
     }
   </style>
 </head>
 
-<body>
-
-<nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Anusha Rao HG</a>
-
-    <div class="form-check form-switch ms-auto">
-      <input class="form-check-input" type="checkbox" id="themeToggle">
-      <label class="form-check-label" id="themeLabel">Dark</label>
+<body class="theme-transition">
+  <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+        <div class="brand-mark">AR</div>
+        <div>
+          <div class="fw-bold">Anusha Rao HG</div>
+          <small class="text-muted">UI/UX Designer</small>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navCollapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item d-flex align-items-center ms-2">
+            <div class="form-check form-switch mb-0">
+              <input class="form-check-input" type="checkbox" id="themeToggle" aria-label="Toggle theme" />
+              <label class="form-check-label small ms-2" for="themeToggle" id="themeLabel">Dark</label>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<main class="container py-5">
+  <main class="container py-5">
+    <!-- ABOUT -->
+    <section id="about" class="mb-5">
+      <div class="row align-items-center g-4">
+        <!-- <div class="col-md-4 text-center">
+          <img src="https://via.placeholder.com/250x250.png?text=Your+Photo" alt="Profile"
+            class="rounded-circle img-fluid shadow-sm">
+        </div> -->
+        <div class="col-md-12">
+          <h1 class="fw-bold mb-3">Hi, I'm Anusha Rao HG 👋</h1>
+          <p class="lead text-muted">Aspiring UI/UX Designer with 2 years of experience in crafting user-centered web
+            and mobile applications. Skilled in creating wireframes, prototypes, and visually appealing interfaces using
+            Figma. Adept at translating business requirements and user feedback into intuitive design solutions. Strong
+            front-end foundation in HTML, CSS, Bootstrap, and Ionic Framework, enabling smooth collaboration with
+            developers and ensuring design feasibility. Passionate about blending creativity and technology to deliver
+            seamless and engaging user experiences.</p>
+          <ul class="list-unstyled text-muted mb-3">
+            <li>📍 Sringeri, Karnataka</li>
+            <li>📧 <a href="mailto:anuraohebbige57@gmail.com">anuraohebbige57@gmail.com</a></li>
+            <li>📱 +91 8073785883</li>
+          </ul>
+          <a href="anusha_ui_ux.pdf" class="btn btn-primary" download>📄 Download Resume</a>
+        </div>
+      </div>
+    </section>
 
-<section id="projects">
+    <!-- PROJECTS / VIEW MY WORK -->
+    <!-- <section id="projects" class="mb-5">
+      <h2 class="h3 mb-3">View My Work</h3>
+      <div class="row g-3">
+        <h2 class="h4 mb-3">My Projects</h2>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="RecN screenshot">
+            <div class="card-body">
+              <h5 class="card-title">MotolensAi</h5>
+              <p class="card-text text-muted small">Designed end-to-end company flow and settings screens. Created multiple color themes and handoff assets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="RecN screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Truth Hero</h5>
+              <p class="card-text text-muted small">Designed end-to-end company flow and settings screens. Created multiple color themes and handoff assets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Motolense screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Property App</h5>
+              <p class="card-text text-muted small">Explored different color themes and component variations to improve brand consistency.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">RecN</h5>
+              <p class="card-text text-muted small">Designed an app for officers to capture vehicle offenses with robust form flows and quick-capture UX.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1200&auto=format&fit=crop" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Staymaker</h5>
+              <p class="card-text text-muted small">Designed an app for officers to capture vehicle offenses with robust form flows and quick-capture UX.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section id="projects" class="mb-5">
   <h2 class="h3 mb-3">View My Work</h2>
   <h3 class="h5 text-muted mb-4">My Projects</h3>
 
-  <div id="projectsCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="row g-3">
 
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#projectsCarousel" data-bs-slide-to="1"></button>
-    </div>
-
-    <div class="carousel-inner">
-
-      <!-- SLIDE 1 -->
-      <div class="carousel-item active">
-        <div class="row g-3">
-
-          <!-- CARD -->
-          <div class="col-lg-3 col-md-6">
-            <div class="card project-card h-100"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-title="MotolensAi"
-              data-image="/assets/motolensai.png"
-              data-points="Company & admin flow|Settings screen design|Multiple theme support|UI + development">
-              <img src="/assets/motolensai.png" class="card-img-top">
-              <div class="card-body">
-                <h5>MotolensAi</h5>
-                <p class="text-muted small">Company flow & settings screens.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card project-card h-100"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-title="Truth Hero"
-              data-image="/assets/truth-hero.png"
-              data-points="Brand-driven UI|Reusable components|Clear UX hierarchy">
-              <img src="/assets/truth-hero.png" class="card-img-top">
-              <div class="card-body">
-                <h5>Truth Hero</h5>
-                <p class="text-muted small">Brand-driven UI components.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card project-card h-100"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-title="Property App"
-              data-image="https://images.unsplash.com/photo-1502877338535-766e1452684a"
-              data-points="Theme exploration|Component consistency|Responsive layouts">
-              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="card-img-top">
-              <div class="card-body">
-                <h5>Property App</h5>
-                <p class="text-muted small">UI & theme consistency.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="card project-card h-100"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-title="RecN"
-              data-image="https://images.unsplash.com/photo-1502877338535-766e1452684a"
-              data-points="Vehicle offense capture|Fast form UX|Field usability focused">
-              <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a" class="card-img-top">
-              <div class="card-body">
-                <h5>RecN</h5>
-                <p class="text-muted small">Vehicle offense capture UX.</p>
-              </div>
-            </div>
-          </div>
-
+    <!-- CARD 1 -->
+    <div class="col-lg-3 col-md-6">
+      <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+        data-title="MotolensAi" data-image="./assets/motolensai.png"
+        data-points="Company & admin flow|Settings screen design|Multiple theme support|UI + development">
+        <img src="./assets/motolensai.png" class="card-img-top">
+        <div class="card-body">
+          <h5>MotolensAi</h5>
+          <p class="text-muted small">Company flow & settings screens.</p>
         </div>
       </div>
+    </div>
 
-      <!-- SLIDE 2 -->
-      <div class="carousel-item">
-        <div class="row g-3">
-          <div class="col-lg-3 col-md-6">
-            <div class="card project-card h-100"
-              data-bs-toggle="modal"
-              data-bs-target="#projectModal"
-              data-title="Staymaker"
-              data-image="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5"
-              data-points="Booking flow UX|Admin dashboard|Hospitality platform UI">
-              <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5" class="card-img-top">
-              <div class="card-body">
-                <h5>Staymaker</h5>
-                <p class="text-muted small">Booking flow design.</p>
-              </div>
-            </div>
-          </div>
+    <!-- CARD 2 -->
+    <div class="col-lg-3 col-md-6">
+      <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+        data-title="Truth Hero" data-image="./assets/truth-hero.png"
+        data-points="Brand-driven UI|Reusable components|Clear UX hierarchy">
+        <img src="./assets/truth-hero.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Truth Hero</h5>
+          <p class="text-muted small">Brand-driven UI components.</p>
         </div>
       </div>
-
     </div>
+
+    <!-- CARD 3 -->
+    <div class="col-lg-3 col-md-6">
+      <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+        data-title="Property App" data-image="./assets/property-app.png"
+        data-points="Theme exploration|Component consistency|Responsive layouts">
+        <img src="./assets/property-app.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Property App</h5>
+          <p class="text-muted small">UI & theme consistency.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="col-lg-3 col-md-6">
+      <div class="card project-card h-100" data-bs-toggle="modal" data-bs-target="#projectModal"
+        data-title="Staymaker" data-image="./assets/staymaker.png"
+        data-points="Booking flow UX|Admin dashboard|Hospitality platform UI">
+        <img src="./assets/staymaker.png" class="card-img-top">
+        <div class="card-body">
+          <h5>Staymaker</h5>
+          <p class="text-muted small">Booking flow design.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-</main>
+    <section class="mb-5">
+      <div class="row g-3">
+        <h3 class="h5 text-muted mb-4">Posters & Banners</h3>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Banner-3_3-Final.png" class="card-img-top" alt="RecN screenshot">
+            <div class="card-body">
+              <h5 class="card-title">Clavrit – Expo Branding</h5>
+              <p class="card-text text-muted small">Designed branding creatives for company expo events, highlighting
+                Clavrit’s innovation and sustainability focus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Motolens-banner_Design-2-Final 2.png" class="card-img-top" alt="RecN screenshot">
+            <div class="card-body">
+              <h5 class="card-title">MotoLensAI – Product Showcase</h5>
+              <p class="card-text text-muted small">Created expo visuals showcasing AI-powered road safety solutions and
+                key product features.</p>
+            </div>
+          </div>
+        </div>
 
-<!-- MODAL -->
-<div class="modal fade" id="projectModal" tabindex="-1">
-  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalTitle"></h5>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Sustainability&AI_Banner.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Sustainability & AI Solutions – Corporate Display</h5>
+              <p class="card-text text-muted small">Designed an expo creative highlighting AI-driven ESG solutions with
+                clear, impactful messaging.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Resort.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Kimmane Luxury Golf Resort</h5>
+              <p class="card-text text-muted small">Designed promotional creatives for a luxury resort to boost brand
+                appeal and bookings.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Clothing.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Vastra Villa – Bridal Collection</h5>
+              <p class="card-text text-muted small">Created elegant promotional designs for a bridal saree collection.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Dubai Travel.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Dubai Holiday Package – Travel Promo</h5>
+              <p class="card-text text-muted small">Designed travel creatives promoting Dubai holiday packages with
+                strong visual appeal.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Dubai holiday package.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Dubai Travel Campaign</h5>
+              <p class="card-text text-muted small">Developed engaging marketing creatives for a Dubai travel package.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card project-card h-100">
+            <img src="./assets/Automobile.png" class="card-img-top" alt="Vehicle offense app">
+            <div class="card-body">
+              <h5 class="card-title">Zoomcar – Promotional Ad</h5>
+              <p class="card-text text-muted small">Designed a promotional ad focusing on offers and user engagement.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="modal-body">
-        <img id="projectModalImage" class="img-fluid rounded mb-3">
-        <ul id="projectModalPoints" class="text-muted"></ul>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="mb-5">
+      <h2 class="h4 mb-3">Professional Experience</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Frontend Developer — Clavrit Digital Solutions</h5>
+              <p class="text-muted small">Dec 2024 – Present</p>
+              <ul class="text-muted small">
+                <li>Designed and developed an AI-based responsive mobile app using Figma, Ionic, HTML, CSS, and
+                  Bootstrap.</li>
+                <li>Created user flows, wireframes, and interactive prototypes translating business requirements into
+                  intuitive UI.</li>
+                <li>Collaborated with product managers and engineers to deliver seamless applications.</li>
+                <li>Contributed to branding by designing banners and marketing materials.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Frontend Developer — World Vision Softek</h5>
+              <p class="text-muted small">2022 – 2023</p>
+              <ul class="text-muted small">
+                <li>Developed responsive web interfaces using HTML, CSS, and JavaScript ensuring cross-browser
+                  compatibility.</li>
+                <li>Collaborated with UI/UX designers to create visually appealing web applications.</li>
+                <li>Optimized code and assets for faster performance and improved UX.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Web Developer Intern — DC IKIGAI PVT LTD</h5>
+              <p class="text-muted small">May 2021 – Nov 2021</p>
+              <ul class="text-muted small">
+                <li>Gained hands-on experience with version control systems like Git, following coding standards and
+                  best practices.</li>
+                <li>Assisted in building responsive web pages and testing UI components.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="education" class="mb-5">
+      <h2 class="h4 mb-3">Education & Certifications</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Master’s Degree in Computer Science</h5>
+              <p class="text-muted small mb-0">2019 – 2021, Mahatma Gandhi Memorial College</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Bachelor’s Degree in Science</h5>
+              <p class="text-muted small mb-0">2016 – 2019, Poorna Prajna College</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5>Certification: The Complete Web Development Course</h5>
+              <p class="text-muted small mb-0">Udemy, 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script>
-  // Theme toggle
-  const toggle = document.getElementById('themeToggle');
-  const label = document.getElementById('themeLabel');
-  const stored = localStorage.getItem('site-theme') || 'dark';
+    <!-- SKILLS & LANGUAGES -->
+    <section id="skills" class="mb-5">
+      <h2 class="h4 mb-3">Skills & Languages</h2>
+      <div class="mb-3">
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge bg-secondary skill-badge">Figma</span>
+          <span class="badge bg-secondary skill-badge">Canva</span>
+          <span class="badge bg-secondary skill-badge">HTML</span>
+          <span class="badge bg-secondary skill-badge">CSS</span>
+          <span class="badge bg-secondary skill-badge">Bootstrap</span>
+          <span class="badge bg-secondary skill-badge">Ionic</span>
+          <span class="badge bg-secondary skill-badge">InVision</span>
+          <span class="badge bg-secondary skill-badge">Communication</span>
+          <span class="badge bg-secondary skill-badge">Collaboration</span>
+        </div>
+      </div>
+      <h6 class="fw-bold">Languages</h6>
+      <p class="text-muted small mb-0">Kannada • English • Hindi</p>
+    </section>
 
-  function applyTheme(t) {
-    document.documentElement.setAttribute('data-bs-theme', t);
-    toggle.checked = t === 'dark';
-    label.textContent = t === 'dark' ? 'Dark' : 'Light';
-    localStorage.setItem('site-theme', t);
-  }
-  applyTheme(stored);
-  toggle.addEventListener('change', () => applyTheme(toggle.checked ? 'dark' : 'light'));
+    <!-- CONTACT FORM -->
+    <section id="contact" class="mb-5">
+      <h2 class="h4 mb-3">Get in Touch</h2>
+      <p class="text-muted">Feel free to reach out for collaborations or just a friendly hello 👋</p>
+      <form action="https://formspree.io/f/maylkvwk" method="POST" class="row g-3">
+        <div class="col-md-6">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+        <div class="col-12">
+          <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+    </section>
 
-  // Modal dynamic content
-  const modal = document.getElementById('projectModal');
-  modal.addEventListener('show.bs.modal', e => {
-    const card = e.relatedTarget;
-    document.getElementById('projectModalTitle').textContent = card.dataset.title;
-    document.getElementById('projectModalImage').src = card.dataset.image;
+    <!-- FOOTER -->
+    <footer class="py-4 text-center text-muted small border-top">
+      <div class="mb-2">Connect with me on <a href="https://www.linkedin.com/in/anusharao/" target="_blank">LinkedIn</a>
+      </div>
+      <div>© 2025 Anusha Rao HG • All rights reserved</div>
+    </footer>
+  </main>
 
-    const ul = document.getElementById('projectModalPoints');
-    ul.innerHTML = '';
-    card.dataset.points.split('|').forEach(p => {
-      const li = document.createElement('li');
-      li.textContent = p;
-      ul.appendChild(li);
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const label = document.getElementById('themeLabel');
+    const stored = localStorage.getItem('site-theme') || 'dark';
+
+    function applyTheme(t) {
+      document.documentElement.setAttribute('data-bs-theme', t);
+      label.textContent = t === 'dark' ? 'Dark' : 'Light';
+      toggle.checked = t === 'dark';
+      localStorage.setItem('site-theme', t);
+    }
+
+    applyTheme(stored);
+    toggle.addEventListener('change', () => applyTheme(toggle.checked ? 'dark' : 'light'));
+
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href.length > 1) { e.preventDefault(); document.querySelector(href).scrollIntoView({ behavior: 'smooth' }); }
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
+
 </html>
